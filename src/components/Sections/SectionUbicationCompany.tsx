@@ -9,7 +9,7 @@ import ContactForm from "./components/FormContact";
 
 export default function SectionUbicationCompany() {
   return (
-    <section className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 px-10 md:px-5 p-5 max-w-4xl text-gray-900 dark:text-zinc-300">
+    <section className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 px-10 md:px-5 p-5 max-w-5xl text-gray-900 dark:text-zinc-300">
       {/* Ubicación */}
       <Card className="flex flex-col gap-3">
         <CardHeader>

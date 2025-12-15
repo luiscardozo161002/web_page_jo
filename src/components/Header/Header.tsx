@@ -1,22 +1,29 @@
 "use client"
 
 import { Link } from "react-router-dom"
-//import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button"
 import { ModeToggle } from "../ToogleTheme/mode-toggle"
-//import {
-//  DropdownMenu,
-//  DropdownMenuContent,
-//  DropdownMenuItem,
-//  DropdownMenuTrigger,
-//} from "@/components/ui/dropdown-menu"
-//import { Menu } from "lucide-react"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { Menu } from "lucide-react"
 
 export default function Header() {
+  const handleScrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <header className="sticky top-0 z-20 backdrop-blur md:bg-gradient-to-b md:backdrop-blur border-b border-zinc-900/10 dark:border-zinc-700 md:px-40">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
         <Link
-          to="/"
+          to="/#inicio"
           className="text-2xl font-semibold tracking-wide flex items-center gap-3 text-gray-900 dark:text-zinc-300"
         >
           <img
@@ -24,12 +31,11 @@ export default function Header() {
             alt="Logo de Juárez de Oriente"
             className="w-11 sm:w-16 rounded-full border p-[0.5] bg-white object-cover"
           />
-          <span className="hidden sm:block">Juárez de Oriente</span>
+          <span className="hidden sm:block">Juárez de Oriente | Cooperativa Juárez SCL</span>
         </Link>
 
-        {/* Nav */}
         <div className="flex items-center gap-2">
-          {/*<DropdownMenu>
+          <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon">
                 <Menu className="h-5 w-5" />
@@ -37,26 +43,29 @@ export default function Header() {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem asChild>
-                <Link to="/">Inicio</Link>
+              <DropdownMenuItem onClick={() => handleScrollToSection("inicio")}>
+                Inicio
               </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link to="/acerca">Acerca de</Link>
+              <DropdownMenuItem onClick={() => handleScrollToSection("acerca-de")}>
+                Acerca de
               </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link to="/mision-y-vision">Misión y Visión</Link>
+              <DropdownMenuItem onClick={() => handleScrollToSection("mision-y-vision")}>
+                Misión y Visión
               </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link to="/politicas-de-calidad">Políticas de Calidad</Link>
+              <DropdownMenuItem onClick={() => handleScrollToSection("politicas-de-calidad")}>
+                Políticas de Calidad
               </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link to="/ubicacion">Ubicación</Link>
+              <DropdownMenuItem onClick={() => handleScrollToSection("ubicacion")}>
+                Contáctanos
               </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link to="/valores">Valores</Link>
+              <DropdownMenuItem onClick={() => handleScrollToSection("valores")}>
+                Valores 
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => handleScrollToSection("horario-atencion")}>
+                Horario de Atención
               </DropdownMenuItem>
             </DropdownMenuContent>
-          </DropdownMenu>*/}
+          </DropdownMenu>
           <ModeToggle />
         </div>
       </div>

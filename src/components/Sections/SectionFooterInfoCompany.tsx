@@ -3,13 +3,13 @@ import { Facebook } from "lucide-react";
 export default function SectionFooterInfoCompany() {
   return (
     <>
-      <section className="mx-auto grid md:grid-cols-3 md:grid-rows-1 gap-3 px-10 md:px-45 pb-5 text-gray-900 dark:text-zinc-300">
+      <section className="mx-auto grid md:grid-cols-1 md:grid-rows-1 gap-3 px-10 md:px-50 pb-5 text-gray-900 dark:text-zinc-300">
         <section className="flex flex-col gap-3 md:border md:border-gray-200 p-3 rounded-lg dark:border-zinc-700">
           <h3 className="text-3xl font-extralight text-center">
             <strong>Contáctenos</strong>
           </h3>
           <div>
-            <ul className="flex flex-col gap-3 text-xs md:text-md font-light text-center">
+            <ul className="flex flex-col gap-3 text-md md:text-sm font-light text-center">
               <li className="gap-3">
                 <strong>Dirección:</strong>{" "}
                 <a href="https://maps.app.goo.gl/5kHjFvCHqdfyHYWb8">
@@ -35,8 +35,8 @@ export default function SectionFooterInfoCompany() {
           <h3 className="text-3xl font-extralight text-center">
             <strong>Horario de Atención</strong>
           </h3>
-            <p className="text-xs md:text-md font-light text-center">
-              De Lunes a Viernes de 8:00 a 16:00 hrs.
+            <p className="text-md md:text-md font-light text-center">
+              De Lunes a Viernes de 07:00 a 16:00 hrs.
             </p>
         </section>
         <section className="flex flex-col gap-3 md:border md:border-gray-200 p-3 rounded-lg dark:border-zinc-700">
@@ -44,11 +44,11 @@ export default function SectionFooterInfoCompany() {
             <strong>Redes Sociales</strong>
           </h3>
           <div>
-            <p className="text-xs font-light text-center gap-3">
+            <p className="text-md font-light text-center gap-3">
               Siguenos en:{" "}
-              <a href="https://www.facebook.com/coopjuarez?locale=es_LA">
+              <a href="https://www.facebook.com/coopjuarez?locale=es_LA" className="text-blue-500 dark:text-blue-700">
                 Facebook{" "}
-                <Facebook className="inline text-blue-500 dark:text-blue-400" />
+                <Facebook className="inline text-blue-500 dark:text-blue-700" />
                 @coopjuarez
               </a>
             </p>
@@ -57,7 +57,7 @@ export default function SectionFooterInfoCompany() {
       </section>
       <section className="mx-auto w-full flex items-center justify-center gap-5 px-10 md:px-45 pb-5 text-gray-900 dark:text-zinc-300">
         <span>
-          <p className="text-xs md:text-md font-light text-center gap-3">
+          <p className="text-md md:text-md font-light text-center gap-3">
             <strong>Copyright © {new Date().getFullYear()}</strong> Juárez de Oriente. Todos los
             derechos reservados.
           </p>

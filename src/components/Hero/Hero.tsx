@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(70%_50%_at_50%_20%,rgba(255,255,255,0.06),transparent_60%)]" />
       <section className="mx-auto max-w-7xl px-10 md:px-45 py-5">
         <h3 className="text-balance text-4xl font-semibold leading-tight sm:text-4xl lg:text-6xl text-start text-gray-900 dark:text-zinc-300">
-          Bienvenido a{" "}
+          Bienvenido a la página oficial de{" "}
           <strong className="text-gray-800 drop-shadow-md dark:drop-shadow-2xl dark:text-zinc-200">
             Juárez de Oriente S.A. de C.V.
           </strong>
