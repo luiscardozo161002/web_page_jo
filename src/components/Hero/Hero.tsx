@@ -30,7 +30,7 @@ export default function Hero() {
                 <Mail className="size-5 shrink-0" />
                 <a
                   href="mailto:fabiola.rh.hgo@cooperativajuarez.com.mx"
-                  className="underline-offset-4 hover:underline"
+                  className="underline-offset-4 hover:underline text-wrap"
                   target="_blank"
                 >
                   fabiola.rh.hgo@cooperativajuarez.com.mx
